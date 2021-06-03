@@ -1,0 +1,42 @@
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+
+            </div>
+            <div class="blogPageTitle col-sm-4">
+                <input type="text" placeholder="Title" *ngIf="editable" [(ngModel)]="blog.title">
+                <span *ngIf="!editable"><h1>{{blog.title }}</h1></span>
+                
+            </div>
+            <div class="col-sm-4">
+                <button *ngIf="!editable" (click)="editBlog()">Edit</button>
+                <button *ngIf="editable" (click)="saveBlog()">Save</button>
+                <button *ngIf="blog.id > 0" (click)="deleteBlog()">Delete</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="postHeader">All Posts:</h2>
+            </div>
+            <div class="col-sm-6"> 
+                <button [routerLink]="createPostUrl" routerLinkActive="active"class="createPostBtn">Create a new post</button>
+            </div>
+        </div>
+        <div class="row" *ngFor="let post of blog.posts">
+            <div class="col-sm-8">
+                <h2 class="postTitle">{{post.title}}</h2>
+            </div>
+            <div class="col-sm-4 alignRight">
+                <button [routerLink]="getPostUrl(post)" routerLinkActive="active">Edit</button>
+                <button (click)="deletePost(post)">Delete</button>
+            </div>
+            <div class="col-sm-12">
+                <p>{{post.content}}</p>
+                <button [routerLink]="getPostUrl(post)" routerLinkActive="active">Comments</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>

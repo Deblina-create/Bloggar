@@ -1,0 +1,13 @@
+div{
+    height: 70px;
+    width: 100%;
+    background:linear-gradient( #c31432,  #240b36, );
+    text-align: center;
+    padding-top: 10px;
+}
+button{
+    background-color: rgb(153, 230, 109);
+    height: 30px;
+    width: 300px;
+    color: #750a1c;
+}

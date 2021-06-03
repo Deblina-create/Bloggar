@@ -1,0 +1,18 @@
+.postPageHeader{
+    color: #750a1c;
+
+
+}
+.postEdit{
+    text-align:center;
+
+}
+.postEditTitle{
+    width: 500px;
+    margin-bottom: 15px;
+    color: rgb(57, 109, 27);
+    font-size:25px;
+}
+.commentSectn{
+    text-align: center;
+}

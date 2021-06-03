@@ -1,0 +1,25 @@
+a{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.navHead {
+    background-color: rgb(153, 230, 109);
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    color: #750a1c;
+    }
+
+.newSecondary{
+    background:linear-gradient( #bdc3c7, #2c3e50);
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+}
+.blogBody{
+    
+    color: #750a1c;
+}
+h5{
+    color: rgb(57, 109, 27);
+}
