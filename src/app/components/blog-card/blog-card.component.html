@@ -1,0 +1,9 @@
+<div class="card text-center">
+    <div class="card-body ">
+        <h3 class="card-title blogBody">{{blog.title}}</h3>
+        <h5 >Posts:</h5>
+        <div *ngFor="let post of blog.posts">{{post.title}}</div>
+        <button  [routerLink]="editUrl" routerLinkActive="active" [state]="{ previewMode: true}">Edit</button>
+        <button (click)="deleteBlog()">Delete</button>
+    </div>
+</div>

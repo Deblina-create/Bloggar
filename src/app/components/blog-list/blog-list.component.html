@@ -1,0 +1,7 @@
+<div class="container blogList">
+    <div class="row">
+        <div *ngFor="let blog of blogs" class="col-sm-4">
+            <app-blog-card [blog]="blog" (onDelete)="deleteBlog($event)"></app-blog-card>
+        </div> 
+    </div>
+</div>

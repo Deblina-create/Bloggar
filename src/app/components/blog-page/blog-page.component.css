@@ -1,0 +1,20 @@
+.blogPageTitle{
+    text-align: center;
+    font-size: xx-large;
+}
+
+.alignRight{
+    text-align: right;
+}
+.postHeader{
+    color: #750a1c;
+    padding-top: 20px;
+}
+.postTitle{
+    color: rgb(57, 109, 27);
+}
+.createPostBtn{
+    background-color: rgb(153, 230, 109);
+    margin-top: 100px;
+    margin-left: -100px;
+}

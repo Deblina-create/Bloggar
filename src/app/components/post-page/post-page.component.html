@@ -1,0 +1,32 @@
+<div>
+    <div class="container postEdit">
+        <div class="row" *ngIf="post.blog">
+            <div class="col-sm-12">
+                <h1 class="postPageHeader">{{post.blog.title}}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 *ngIf="!editable">{{post.title}}</h3>
+                <input class="postEditTitle" type="text" *ngIf="editable" [(ngModel)]="post.title" placeholder="Title">
+                <button (click)="editPost()" *ngIf="!editable">Edit</button>
+            </div>
+            <div class="col-sm-12">
+                <p *ngIf="!editable">{{post.content}}</p>
+                <textarea cols="150" rows="10" *ngIf="editable" [(ngModel)]="post.content"></textarea>
+            </div>
+            <div class="col-sm-6" *ngIf="editable">
+                <button (click)="savePost()">Save</button>
+            </div>
+            <div class="col-sm-6" *ngIf="post.id > 0">
+                <button (click)="deletePost()">Delete</button>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="commentSectn">
+    <app-comments *ngIf="post.id > 0" [comments]="post.comments" [postId]= "post.id" (onCommentCreated)= "commentCreated($event)"></app-comments>
+    </div>
+</div>

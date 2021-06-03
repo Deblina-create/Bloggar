@@ -1,0 +1,11 @@
+.navHead {
+background:linear-gradient( #240b36, #c31432);
+padding: 50px;
+}
+
+.navBody{
+    color:cornsilk;
+    font-size:30px;
+    margin-left:-50px;
+
+}

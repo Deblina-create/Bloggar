@@ -1,0 +1,24 @@
+<div class="container"> 
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Comments:</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12"></div>
+        <div class="col-sm-12" *ngIf="comments && comments.length==0">
+            <p>*****No comments yet******</p>
+        </div>
+        <div class="col-sm-12">
+            <textarea cols="150" rows="1"[(ngModel)] ="newComment.content"></textarea>
+            <button (click)= "saveComment()">Add</button>
+        </div>
+    </div>
+    
+    <div class="row commentText" *ngFor="let comment of comments">
+        <div class="col-sm-12">
+            <p>{{comment.content}}</p>
+        </div>
+    </div>
+</div>
+    
